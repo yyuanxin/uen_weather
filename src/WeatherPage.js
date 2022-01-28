@@ -20,9 +20,7 @@ export default function Weather () {
           try {
             //get latest forecast - NOT WORKING AFTER 2021-12-30
             let api = 'https://api.data.gov.sg/v1/environment/2-hour-weather-forecast';
-            // hard coded request that returns at least 1 data result
-            let test = 'https://api.data.gov.sg/v1/environment/2-hour-weather-forecast?date_time=2021-12-30T19:10:00&date=2021-12-30'
-            const res = await fetch(test);
+            const res = await fetch(api);
             const val = await res.json();
             setData(val.items);
             // allow user to interact AFTER data are done loading in

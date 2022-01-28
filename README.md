@@ -17,7 +17,3 @@ You will also see any lint errors in the console.
 
 ## Assumptions
 - UEN checks format and year of issuance (between 1900 to current year)
-
-## Issues with API provided
-- Weather Forecast API returns empty results for records after 2021-12-30
-(All 2022 forecasts not available)
