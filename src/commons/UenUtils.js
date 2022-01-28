@@ -1,6 +1,6 @@
 var currentYear = new Date().getFullYear();
 
-var businessRegex = new RegExp("^[0-9]{8}[A-Z]{1}");
+var businessRegex = new RegExp("^[0-9]{8}[A-Z]{1}$");
 var localRegex = new RegExp("^[0-9]{9}[A-Z]{1}");
 var otherRegex = new RegExp("^T[0-9]{2}[A-Z]{2}[0-9]{4}[A-Z]{1}");
 
