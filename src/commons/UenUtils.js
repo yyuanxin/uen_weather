@@ -1,8 +1,8 @@
 var currentYear = new Date().getFullYear();
 
-var businessRegex = new RegExp("[0-9]{8}[A-Z]{1}");
-var localRegex = new RegExp("[0-9]{9}[A-Z]{1}");
-var otherRegex = new RegExp("T[0-9]{2}[A-Z]{2}[0-9]{4}[A-Z]{1}");
+var businessRegex = new RegExp("^[0-9]{8}[A-Z]{1}");
+var localRegex = new RegExp("^[0-9]{9}[A-Z]{1}");
+var otherRegex = new RegExp("^T[0-9]{2}[A-Z]{2}[0-9]{4}[A-Z]{1}");
 
 const pqList = new Set([
   "LP", "LL", "FC", "PF",
@@ -29,7 +29,7 @@ function isBusinessUen(uen) {
 
 function isLocalUen(uen) {
   if (localRegex.test(uen)) {
-    let year = parseInt(uen.slice(0, 5));
+    let year = parseInt(uen.slice(0, 4));
     if ((year >= 1900) && (year <= currentYear)) {
       return true;
     }
